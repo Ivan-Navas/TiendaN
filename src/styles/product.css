@@ -1,0 +1,89 @@
+.mainProducts {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+}
+.productMainContainer {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.productContainer {
+  width: 200px;
+  height: 328px;
+  background-color: #0e3a5b;
+  border-radius: 16px;
+}
+.productTittle {
+  color: #fff;
+  padding: 12px 0px 4px 9px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.productImage {
+  width: 200px;
+  height: 200px;
+}
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 7px 5px;
+}
+.priceProduct {
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.heartButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.heartImage {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  padding: 4px;
+}
+.heartImage:hover {
+  background-color: rgb(249, 24, 128);
+}
+.ratingContainer {
+  display: flex;
+  margin-left: 5px;
+}
+.starButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.starIcon {
+  width: 11px;
+  height: 11px;
+  padding: 1px;
+  border-radius: 100px;
+}
+.starIcon:hover {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.containerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 11px;
+}
+.productButton {
+  border: none;
+  width: 136px;
+  height: 19px;
+  background-color: #47c3de;
+  border-radius: 16px;
+}
+.productImageButton {
+  width: 19px;
+  height: 19px;
+}

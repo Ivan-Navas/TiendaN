@@ -1,0 +1,53 @@
+.containerMainInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+  margin-bottom: 38px;
+}
+.containerInfo {
+  width: 90%;
+  height: 441px;
+  background: linear-gradient(180deg, #00a5e1 0%, #002332 80.73%);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.info {
+  padding: 50px 0px 0px 34px;
+}
+.tittleInfo {
+  width: 330px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.infoStore {
+  width: 560px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.buttonVamos {
+  width: 312px;
+  height: 47px;
+  background: #47c3de;
+  border-radius: 16px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+  color: #fff;
+  cursor: pointer;
+}
+.imageLogoInfo {
+  margin-right: -2px;
+  height: 100%;
+}

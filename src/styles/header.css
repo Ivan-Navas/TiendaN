@@ -1,0 +1,38 @@
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.buttonHeaderLogin {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #00a5e1;
+  margin-right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.rigth{
+    border-left: 1px solid #00a5e1;
+    padding-left: 20px;
+}
+.userIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+.imageButtonHeader {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+.buttonHeader {
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+}
