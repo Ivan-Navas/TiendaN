@@ -47,6 +47,48 @@
   color: #fff;
   cursor: pointer;
 }
+.buttonVamos:hover {
+  color: #1f1f1f;
+  animation-name: colorsVamos;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorsVamos {
+  0% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 0%);
+  }
+  10% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 20%);
+  }
+  20% {
+    background: linear-gradient(90deg , #fff 20%, #00d0ff 40%);
+  }
+  30% {
+    background: linear-gradient(90deg , #fff 40%, #00d0ff 60%);
+  }
+  40% {
+    background: linear-gradient(90deg , #fff 60%, #00d0ff 80%);
+  }
+  50% {
+    background: linear-gradient(90deg , #fff 80%, #00d0ff 100%);
+  }
+  60% {
+    background: linear-gradient(90deg , #fff 100%, #00d0ff 100%);
+  }
+  70% {
+    background: linear-gradient(90deg , #fff 60%, #00d0ff 80%);
+  }
+  80% {
+    background: linear-gradient(90deg , #fff 40%, #00d0ff 60%);
+  }
+  90% {
+    background: linear-gradient(90deg , #fff 20%, #00d0ff 40%);
+  }
+  100% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 20%);
+  }
+}
 .imageLogoInfo {
   margin-right: -2px;
   height: 100%;

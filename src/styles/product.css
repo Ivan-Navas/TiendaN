@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   width: 100%;
+  margin-bottom: 30px ;
 }
 .productMainContainer {
   width: 100%;
@@ -21,6 +22,11 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
+}
+.productImageContainer{
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
 }
 .productImage {
   width: 200px;
@@ -56,19 +62,11 @@
   display: flex;
   margin-left: 5px;
 }
-.starButton {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.starFill{
+  color: #FDBA23;
 }
-.starIcon {
-  width: 11px;
-  height: 11px;
-  padding: 1px;
-  border-radius: 100px;
-}
-.starIcon:hover {
-  background-color: rgba(255, 255, 0, 0.5);
+.starOut{
+color: #fff;
 }
 .containerButton {
   display: flex;
