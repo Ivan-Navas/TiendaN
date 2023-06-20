@@ -39,13 +39,15 @@
   height: 47px;
   background: #47c3de;
   border-radius: 16px;
-  border: none;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
   color: #fff;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 .buttonVamos:hover {
   color: #1f1f1f;

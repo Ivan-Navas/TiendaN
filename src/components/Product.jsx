@@ -1,11 +1,11 @@
 import React from "react";
-import ProductCart from "./ProductCart";
+import ProductCard from "./ProductCard";
 import "../styles/product.css";
 
 function Product() {
   return (
     <div className="mainProducts">
-      <ProductCart/>
+      <ProductCard />
     </div>
   );
 }

@@ -5,6 +5,9 @@
   margin-top: 10px;
   padding-left: 10px;
 }
+.buttonContainer{
+  display: flex;
+}
 .buttonHeaderLogin {
   font-style: normal;
   font-weight: 600;
@@ -20,10 +23,11 @@
     border-left: 1px solid #00a5e1;
     padding-left: 20px;
 }
-.userIcon {
+.userImage {
   width: 50px;
   height: 50px;
   border-radius: 100px;
+  margin-right: 20px;
 }
 .imageButtonHeader {
   width: 50px;

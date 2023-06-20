@@ -11,7 +11,7 @@ function StoreInfo() {
           <h2 className="tittleInfo">Nombre de la tienda</h2>
           <p className="infoStore">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae ab ipsa quaerat magni dolores expedita sed, libero vero autem, deleniti tempore suscipit perspiciatis saepe amet? Consequatur unde quos animi!</p>
           <div className="buttonContainer">
-            <button className="buttonVamos">¡Vamos!</button>
+            <a href={`/products`} className="buttonVamos">¡Vamos!</a>
           </div>
         </div>
         
