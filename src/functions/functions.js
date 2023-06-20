@@ -18,4 +18,8 @@ const separador = (numero) => {
   return parte.join(".");
 };
 
+const favoriteButton = () => {//TODO: Hacer la funcion para el boton de favoritos
+
+};
+
 export { allProducts, oneProduct, separador };

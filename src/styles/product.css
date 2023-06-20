@@ -103,11 +103,11 @@
 .mainContainer {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 500px;
+  height: 520px;
   padding: 20px;
 }
 .imageContainer {
-  height: 500px;
+  height: 520px;
 }
 .oneProductImage {
   width: 100%;
@@ -146,13 +146,44 @@
   height: 267px;
   border-radius: 16px;
 }
+.oneProductStarSizeContainer{
+display: flex;
+justify-content: space-between;
+margin-top: 19px;
+align-items: center;
+}
+.oneProductSizeContainer{
+  display: flex ;
+  align-items: center;
+  height:  30px;  }
 .oneProductSize {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #1f1f1f;
-  margin-top: 19px;
+  height: 30px;
+}
+.oneProductSelect{
+  height: 30px;
+  min-width: 200px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #1f1f1f;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-bottom: 1px solid #47c3de;
+  outline: none;
+}
+.oneProductSelect .oneProductOption{
+  color: #1f1f1f;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.oneProductStarsContainer{
+  margin-right: 20px;
 }
 .oneProductStock {
   margin-top: 13px;
@@ -182,4 +213,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }

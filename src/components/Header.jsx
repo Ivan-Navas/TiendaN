@@ -9,6 +9,11 @@ import "../styles/header.css";
 
 function Header() {
   const { isAuthenticated } = useAuth0();
+  // TODO: Corregir problema conexion; aparace iniciar sesión
+  //TODO: crear el input para la busqueda(+ estilos)
+  //TODO: Hacer funcional el boton de busqueda
+  //TODO: hacer el funcional el boton del carrito
+
   return (
     <div className="containerHeader">
       <div className="buttonContainer">

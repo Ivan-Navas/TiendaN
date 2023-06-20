@@ -9,17 +9,19 @@ import {
   AiOutlineHeart,
 } from "react-icons/ai";
 import { allProducts } from "../functions/functions";
-import {separador} from '../functions/functions'
+import { separador } from "../functions/functions";
 
 function ProductCart() {
+  //TODO: Cambiar la api de rick y morty por los productos reales
+  //TODO: Crear opciones para talla
+  //TODO: Hacer el evento de boton favorito
+  //TODO: Crear el carrito de compras
+
   const [products, setProducts] = useState(null);
   useEffect(() => {
     allProducts(setProducts);
   }, []);
 
-  const favoriteButton = () => {
-    setProducts.productFavorite(!products.productFavorite);
-  };
   return (
     <>
       {products != null ? (
@@ -39,11 +41,7 @@ function ProductCart() {
                 </div>
                 <div className="priceContainer">
                   <p className="priceProduct">${separador(product.id)}</p>
-                  <button
-                    id="heartImage"
-                    className="heartButton"
-                    onClick={favoriteButton}
-                  >
+                  <button id="heartImage" className="heartButton">
                     {product.status == "Alive" ? (
                       <AiFillHeart className="heartFill" />
                     ) : (
@@ -52,13 +50,13 @@ function ProductCart() {
                   </button>
                 </div>
                 <div className="ratingContainer">
-                  {/* {[...new Array(5)].map((star, index) => {
-          return index < 2 ? (
+                  {[...new Array(5)].map((star, index) => {
+          return index < product.id ? (
             <AiFillStar className="starFill" />
           ) : (
             <AiOutlineStar className="starOut" />
           );
-        })} */}
+        })}
                 </div>
                 <div className="containerButton">
                   <button className="productButton">
