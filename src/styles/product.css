@@ -38,7 +38,7 @@
 .priceContainer {
   display: flex;
   justify-content: space-between;
-  margin: 0px 0px 7px 5px;
+  margin: 0px 0px 5px 5px;
 }
 .priceProduct {
   color: #fff;
@@ -52,12 +52,14 @@
   width: 20px;
   height: 20px;
   padding: 5px;
+  cursor: pointer;
 }
 .heartOut {
   color: #fff;
   width: 20px;
   height: 20px;
   padding: 5px;
+  cursor: pointer;
 }
 .heartOut:hover {
   background-color: rgba(249, 24, 128, 0.5);
@@ -77,9 +79,11 @@
 }
 .starFill {
   color: #fdba23;
+  cursor: pointer;
 }
 .starOut {
   color: #fff;
+  cursor: pointer;
 }
 .containerButton {
   display: flex;
@@ -93,6 +97,7 @@
   height: 19px;
   background-color: #47c3de;
   border-radius: 16px;
+  cursor: pointer;
 }
 .productImageButton {
   width: 19px;
@@ -103,7 +108,7 @@
 .mainContainer {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 520px;
+  height: 90%;
   padding: 20px;
 }
 .imageContainer {
@@ -146,16 +151,17 @@
   height: 267px;
   border-radius: 16px;
 }
-.oneProductStarSizeContainer{
-display: flex;
-justify-content: space-between;
-margin-top: 19px;
-align-items: center;
-}
-.oneProductSizeContainer{
-  display: flex ;
+.oneProductStarSizeContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
   align-items: center;
-  height:  30px;  }
+}
+.oneProductSizeContainer {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
 .oneProductSize {
   font-style: normal;
   font-weight: 700;
@@ -164,7 +170,7 @@ align-items: center;
   color: #1f1f1f;
   height: 30px;
 }
-.oneProductSelect{
+.oneProductSelect {
   height: 30px;
   min-width: 200px;
   margin-left: 10px;
@@ -177,12 +183,12 @@ align-items: center;
   border-bottom: 1px solid #47c3de;
   outline: none;
 }
-.oneProductSelect .oneProductOption{
+.oneProductSelect .oneProductOption {
   color: #1f1f1f;
   font-size: 16px;
   font-family: sans-serif;
 }
-.oneProductStarsContainer{
+.oneProductStarsContainer {
   margin-right: 20px;
 }
 .oneProductStock {
@@ -214,4 +220,106 @@ align-items: center;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.oneProductHeart {
+  width: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+/** responsive*/
+@media (max-width: 930px) {
+  .mainProducts {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media (max-width: 750px) {
+  .mainProducts {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  .mainProducts {
+    grid-template-columns: 100%;
+  }
+
+  .productContainer {
+    width: 300px;
+    height: 500px;
+  }
+  .productImageContainer {
+    width: 300px;
+    height: 300px;
+  }
+  .productImage {
+    width: 300px;
+    height: 300px;
+  }
+  .priceContainer {
+    margin-top: 20px;
+  }
+  .containerButton {
+    margin-top: 30px;
+    width: 300px;
+    height: 30px;
+  }
+  .productButton {
+    width: 250px;
+    height: 30px;
+  }
+  .productImageButton {
+    width: 30px;
+    height: 30px;
+  }
+  .mainContainer {
+    grid-template-columns: auto;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+  }
+  .imageContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProductImage {
+    border-radius: 16px;
+    width: 95%;
+  }
+  .oneProductInfoContainer{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .moreImagesContainer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+  }
+  .moreImages{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+
+  .buyButton {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  
 }

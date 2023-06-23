@@ -4,7 +4,7 @@ import { oneProduct } from "../functions/functions";
 import { separador } from "../functions/functions";
 import { VscCircleFilled } from "react-icons/vsc";
 import { BsCartPlus } from "react-icons/bs";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar,AiOutlineHeart,AiFillHeart } from "react-icons/ai";
 import "../styles/product.css";
 
 function OneProduct() {
@@ -26,11 +26,18 @@ function OneProduct() {
             />
           </div>
           <div className="oneProductInfoContainer">
-            <h2 className="oneProductName">{product.name}</h2>
+            <div className="nameContainer">
+              <h2 className="oneProductName">{product.name}</h2>
+              {product.status == "Alive" ? (
+                      <AiFillHeart className="heartFill oneProductHeart" />
+                    ) : (
+                      <AiOutlineHeart className="heartOut oneProductHeart" />
+                    )}
+            </div>
             <p className="oneProductPrice">${separador(1000000)}</p>
             <div className="moreImagesContainer">
               <img
-                className="moreImages"
+                className="moreImages img"
                 src={product.image}
                 alt={product.name}
               />

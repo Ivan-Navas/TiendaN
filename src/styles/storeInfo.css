@@ -6,7 +6,7 @@
 }
 .containerInfo {
   width: 90%;
-  height: 441px;
+  min-height: 441px;
   background: linear-gradient(180deg, #00a5e1 0%, #002332 80.73%);
   border-radius: 16px;
   display: grid;
@@ -26,7 +26,7 @@
   margin-bottom: 25px;
 }
 .infoStore {
-  width: 560px;
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -94,4 +94,19 @@
 .imageLogoInfo {
   margin-right: -2px;
   height: 100%;
+}
+
+/**Responsive*/
+
+@media (max-width: 400px){
+
+  .containerInfo{
+    grid-template-columns: 100%;
+  }
+  .imageLogoInfo{
+    display: none;
+  }
+  .buttonVamos{
+    margin-bottom: 20px;
+  }
 }
