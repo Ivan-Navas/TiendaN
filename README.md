@@ -1,9 +1,4 @@
 # Tienda Con React
-
-
-
-
-cosnt prueba = ()=>{
-    return "Prueba de codigo"
-}
-
+`const prueba = (i)=>{
+    return i
+}`
