@@ -1,4 +1,7 @@
 # Tienda Con React
-`const prueba = (i)=>{
-    return i
-}`
+```javascript
+
+const prueba = (e)=>{
+    return e
+}
+```
