@@ -6,7 +6,7 @@
 }
 .containerInfo {
   width: 90%;
-  height: 441px;
+  min-height: 441px;
   background: linear-gradient(180deg, #00a5e1 0%, #002332 80.73%);
   border-radius: 16px;
   display: grid;
@@ -26,7 +26,7 @@
   margin-bottom: 25px;
 }
 .infoStore {
-  width: 560px;
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -39,15 +39,74 @@
   height: 47px;
   background: #47c3de;
   border-radius: 16px;
-  border: none;
   font-style: normal;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
   color: #fff;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.buttonVamos:hover {
+  color: #1f1f1f;
+  animation-name: colorsVamos;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorsVamos {
+  0% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 0%);
+  }
+  10% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 20%);
+  }
+  20% {
+    background: linear-gradient(90deg , #fff 20%, #00d0ff 40%);
+  }
+  30% {
+    background: linear-gradient(90deg , #fff 40%, #00d0ff 60%);
+  }
+  40% {
+    background: linear-gradient(90deg , #fff 60%, #00d0ff 80%);
+  }
+  50% {
+    background: linear-gradient(90deg , #fff 80%, #00d0ff 100%);
+  }
+  60% {
+    background: linear-gradient(90deg , #fff 100%, #00d0ff 100%);
+  }
+  70% {
+    background: linear-gradient(90deg , #fff 60%, #00d0ff 80%);
+  }
+  80% {
+    background: linear-gradient(90deg , #fff 40%, #00d0ff 60%);
+  }
+  90% {
+    background: linear-gradient(90deg , #fff 20%, #00d0ff 40%);
+  }
+  100% {
+    background: linear-gradient(90deg , #fff 0%, #00d0ff 20%);
+  }
 }
 .imageLogoInfo {
   margin-right: -2px;
   height: 100%;
+}
+
+/**Responsive*/
+
+@media (max-width: 400px){
+
+  .containerInfo{
+    grid-template-columns: 100%;
+  }
+  .imageLogoInfo{
+    display: none;
+  }
+  .buttonVamos{
+    margin-bottom: 20px;
+  }
 }
