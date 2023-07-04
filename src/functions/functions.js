@@ -12,6 +12,7 @@ const oneProduct = async (id, state) => {
   state(peticion.data);
 };
 
+
 const separador = (numero) => {
   let parte = numero.toString().split(".");
   parte[0] = parte[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
