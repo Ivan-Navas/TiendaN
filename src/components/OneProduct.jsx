@@ -19,8 +19,6 @@ function OneProduct() {
   useEffect(() => {
     oneProductContext.showOneProduct(params.id);
   }, []);
-console.log(params.id)
-  
 
   return (
     <>
