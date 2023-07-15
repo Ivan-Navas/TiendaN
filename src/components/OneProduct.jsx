@@ -1,60 +1,56 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { oneProduct } from "../functions/functions";
+import React, { useContext, useEffect, useState } from "react";
 import { separador } from "../functions/functions";
 import { VscCircleFilled } from "react-icons/vsc";
 import { BsCartPlus } from "react-icons/bs";
-import { AiFillStar, AiOutlineStar,AiOutlineHeart,AiFillHeart } from "react-icons/ai";
+import {
+  AiFillStar,
+  AiOutlineStar,
+  AiOutlineHeart,
+  AiFillHeart,
+} from "react-icons/ai";
 import "../styles/product.css";
+import { Context } from "../Context/Context";
+import {useParams} from 'react-router-dom'
 
 function OneProduct() {
-  const [product, setProduct] = useState(null);
+  const oneProductContext = useContext(Context);
   const params = useParams();
 
   useEffect(() => {
-    oneProduct(params.id, setProduct);
+    oneProductContext.showOneProduct(params.id);
   }, []);
+
+  
+
   return (
     <>
-      {product != null ? (
-        <div className="mainContainer">
+      {oneProductContext.oneProduct != null ? (
+        <div key={params.id} className="mainContainer">
           <div className="imageContainer">
-            <img
-              className="oneProductImage"
-              src={product.image}
-              alt="ProductImage"
-            />
+            <img className="oneProductImage" alt="ProductImage" src={oneProductContext.oneProduct.image} />
           </div>
           <div className="oneProductInfoContainer">
             <div className="nameContainer">
-              <h2 className="oneProductName">{product.name}</h2>
-              {product.status == "Alive" ? (
-                      <AiFillHeart className="heartFill oneProductHeart" />
-                    ) : (
-                      <AiOutlineHeart className="heartOut oneProductHeart" />
-                    )}
+              <h2 className="oneProductName">{oneProductContext.oneProduct.name}</h2>
+              {oneProductContext.oneProduct.favorite == true ? (
+                <AiFillHeart className="heartFill oneProductHeart" />
+              ) : (
+                <AiOutlineHeart className="heartOut oneProductHeart" />
+              )}
             </div>
-            <p className="oneProductPrice">${separador(1000000)}</p>
+            <p className="oneProductPrice">${separador(oneProductContext.oneProduct.price)}</p>
             <div className="moreImagesContainer">
-              <img
-                className="moreImages img"
-                src={product.image}
-                alt={product.name}
-              />
-              <img
-                className="moreImages"
-                src={product.image}
-                alt={product.name}
-              />
+              <img className="moreImages img" alt={oneProductContext.oneProduct.name} src={oneProductContext.oneProduct.image} />
+              <img className="moreImages" alt={oneProductContext.oneProduct.name} src={oneProductContext.oneProduct.image} />
             </div>
             <div className="oneProductStarSizeContainer">
               <div className="oneProductSizeContainer">
                 <p className="oneProductSize">Talla:</p>
                 <select className="oneProductSelect" name="" id="">
-                  {[...new Array(product.id)].map((option, index) => {
-                    return index < product.id ? (
+                  {[...new Array(1)].map((option, index) => {
+                    return index < 1 ? (
                       <option className="oneProductOption">
-                        {product.name}
+                        {oneProductContext.oneProduct.size}
                       </option>
                     ) : (
                       <option value="No hay tallas disponibles"></option>
@@ -64,7 +60,7 @@ function OneProduct() {
               </div>
               <div className="oneProductStarsContainer">
                 {[...new Array(5)].map((star, index) => {
-                  return index < product.id ? (
+                  return index < oneProductContext.oneProduct.rating ? (
                     <AiFillStar className="starFill" />
                   ) : (
                     <AiOutlineStar className="starOutOne" />
@@ -72,15 +68,15 @@ function OneProduct() {
                 })}
               </div>
             </div>
-            {product.id <= 2 ? (
+            {oneProductContext.oneProduct.stock <= 2 ? (
               <p className="oneProductStock low">
                 {" "}
-                <VscCircleFilled /> {product.id} Disponible
+                <VscCircleFilled /> {oneProductContext.oneProduct.stock} Disponible
               </p>
             ) : (
               <p className="oneProductStock up">
                 {" "}
-                <VscCircleFilled /> {product.id} Disponible
+                <VscCircleFilled /> {oneProductContext.oneProduct.stock} Disponible
               </p>
             )}
 
@@ -93,7 +89,17 @@ function OneProduct() {
           </div>
         </div>
       ) : (
-        "El producto no existe"
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h2 style={{ color: "#47c3de" }}>!Producto agotado¡</h2>
+        </div>
       )}
     </>
   );
