@@ -28,4 +28,3 @@ export const Peticion = async (url, metodo, datosGuardar) => {
       data,
       cargando,
     };
-  }

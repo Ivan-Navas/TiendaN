@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import ProductCard from "./ProductCard";
 import "../styles/product.css";
-import  { Context } from '../Context/Context';
 
 function Product() {
-const contexto = useContext(Context)
 
   return (
     <div className="mainProducts">
@@ -12,5 +10,4 @@ const contexto = useContext(Context)
     </div>
   );
 }
-
 export default Product;

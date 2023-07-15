@@ -1,4 +1,4 @@
-import React,{useContext, useEffect, useState} from "react";
+import React,{useContext, useEffect} from "react";
 import "../styles/product.css";
 import cartAddImage from "../images/CartAddImage.png";
 import {
@@ -8,6 +8,7 @@ import {
   AiOutlineHeart,
 } from "react-icons/ai";
 import { separador } from "../functions/functions";
+import defaultImage from '../images/defaultImage.png'
 import { Context } from "../Context/Context";
 
 
@@ -17,30 +18,11 @@ function ProductCart() {
 //TODO: Hacer el evento de boton favorito
 //TODO: Crear el carrito de compras
 
-//TODO: Crear opciones para talla
-//TODO: Hacer el evento de boton favorito
-//TODO: Crear el carrito de compras
-
 const productsContext = useContext(Context);
-const [favorite, setFavorite] = useState("")
 
 useEffect(() => {
   productsContext.showProducts();
 }, []);
-
-const favotiteProduct = async ()=>{
-  const url = `http://localhost:3900/api/favorite/${productsContext.identification}`;
-    let peticion = await fetch(url, {
-      method: "PUT"
-    });
-    let datos = await peticion.json();
-
-
-    if (datos.status === "success") {
-      setFavorite(datos.product);
-    }
-}
-console.log(favorite)
   return (
     <>
       {productsContext.products.length != 0 ? (
@@ -67,18 +49,16 @@ console.log(favorite)
                     {product.favorite == true ? (
                       <AiFillHeart className="heartFill" />
                     ) : (
-                      <AiOutlineHeart className="heartOut" onClick={()=>{
-                        favotiteProduct();
-                      }} />
+                      <AiOutlineHeart className="heartOut" />
                     )}
                   </button>
                 </div>
                 <div  className="ratingContainer">
                   {[...new Array(5)].map((star, index) => {
           return index < product.rating ? (
-            <AiFillStar className="starFill" />
+            <AiFillStar key={Math.random(1,100)} className="starFill" />
           ) : (
-            <AiOutlineStar className="starOut" />
+            <AiOutlineStar key={Math.random(1,100)} className="starOut" />
           );
         })}
                 </div>

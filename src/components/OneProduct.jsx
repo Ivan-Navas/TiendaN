@@ -10,15 +10,17 @@ import {
 } from "react-icons/ai";
 import "../styles/product.css";
 import { Context } from "../Context/Context";
-import { useParams } from "react-router-dom";
+import {useParams} from 'react-router-dom'
 
 function OneProduct() {
   const oneProductContext = useContext(Context);
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
     oneProductContext.showOneProduct(params.id);
   }, []);
+
+  
 
   return (
     <>
