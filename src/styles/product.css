@@ -61,6 +61,7 @@
   padding: 5px;
   cursor: pointer;
 }
+
 .heartOut:hover {
   background-color: rgba(249, 24, 128, 0.5);
   color: #f91880;
@@ -72,18 +73,39 @@
   cursor: pointer;
   margin-right: 4px;
 }
-
 .ratingContainer {
   display: flex;
   margin-left: 5px;
 }
 .starFill {
   color: #fdba23;
-  cursor: pointer;
 }
 .starOut {
   color: #fff;
+}
+.star{
   cursor: pointer;
+  padding: 2px;
+}
+.puesto1{
+  color: #fdba23;
+}
+.puesto2{
+  color: #fdba23;
+}
+.puesto3{
+  color: #fdba23;
+}
+.puesto4{
+  color: #fdba23;
+}
+.puesto5{
+  color: #fdba23;
+}
+.star:hover{
+  color: #fdba23;
+  background-color: rgba(255, 255, 0, 0.5);
+  border-radius: 100px;
 }
 .containerButton {
   display: flex;
@@ -226,9 +248,10 @@
   justify-content: space-between;
 }
 .oneProductHeart {
-  width: 30px;
+  width: 20px;
   margin-right: 20px;
   cursor: pointer;
+  color: #1f1f1f;
 }
 /** responsive*/
 @media (max-width: 930px) {

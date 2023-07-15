@@ -1,7 +1,6 @@
-# Tienda Con React
+**Tienda
+
 ```javascript
 
-const prueba = (e)=>{
-    return e
-}
+
 ```
