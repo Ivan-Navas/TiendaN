@@ -24,3 +24,4 @@ const favoriteButton = () => {//TODO: Hacer la funcion para el boton de favorito
 };
 
 export { allProducts, oneProduct, separador };
+

@@ -31,9 +31,6 @@ export const ContextProvider = ({ children }) => {
       setOneProduct(datos.product);
     }
   };
-
-  
-
   return (
     <Context.Provider
       value={{

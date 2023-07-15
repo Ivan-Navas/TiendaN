@@ -17,6 +17,10 @@ function ProductCart() {
 //TODO: Hacer el evento de boton favorito
 //TODO: Crear el carrito de compras
 
+//TODO: Crear opciones para talla
+//TODO: Hacer el evento de boton favorito
+//TODO: Crear el carrito de compras
+
 const productsContext = useContext(Context);
 const [favorite, setFavorite] = useState("")
 
@@ -61,9 +65,7 @@ console.log(favorite)
                   <p className="priceProduct">${separador(product.price)}</p>
                   <button id="heartImage" className="heartButton">
                     {product.favorite == true ? (
-                      <AiFillHeart className="heartFill" onClick={()=>{
-                        favotiteProduct();
-                      }}  />
+                      <AiFillHeart className="heartFill" />
                     ) : (
                       <AiOutlineHeart className="heartOut" onClick={()=>{
                         favotiteProduct();
@@ -74,9 +76,9 @@ console.log(favorite)
                 <div  className="ratingContainer">
                   {[...new Array(5)].map((star, index) => {
           return index < product.rating ? (
-            <AiFillStar key={Math.random(1,100)} className="starFill star" />
+            <AiFillStar className="starFill" />
           ) : (
-            <AiOutlineStar key={Math.random(1,100)} className="starOut star" />
+            <AiOutlineStar className="starOut" />
           );
         })}
                 </div>

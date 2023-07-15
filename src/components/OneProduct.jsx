@@ -23,7 +23,7 @@ function OneProduct() {
   return (
     <>
       {oneProductContext.oneProduct != null ? (
-        <div  key={params.id} className="mainContainer">
+        <div key={params.id} className="mainContainer">
           <div className="imageContainer">
             <img className="oneProductImage" alt="ProductImage" src={oneProductContext.oneProduct.image} />
           </div>
@@ -31,7 +31,6 @@ function OneProduct() {
             <div className="nameContainer">
               <h2 className="oneProductName">{oneProductContext.oneProduct.name}</h2>
               {oneProductContext.oneProduct.favorite == true ? (
-                
                 <AiFillHeart className="heartFill oneProductHeart" />
               ) : (
                 <AiOutlineHeart className="heartOut oneProductHeart" />
