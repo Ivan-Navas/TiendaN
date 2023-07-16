@@ -1,4 +1,4 @@
-import React,{useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/product.css";
 import cartAddImage from "../images/CartAddImage.png";
 import {
@@ -7,22 +7,18 @@ import {
   AiFillHeart,
   AiOutlineHeart,
 } from "react-icons/ai";
-import { separador } from "../functions/functions";
-import defaultImage from '../images/defaultImage.png'
 import { Context } from "../Context/Context";
 
-
 function ProductCart() {
+  //TODO: Crear opciones para talla
+  //TODO: Hacer el evento de boton favorito
+  //TODO: Crear el carrito de compras
 
-//TODO: Crear opciones para talla
-//TODO: Hacer el evento de boton favorito
-//TODO: Crear el carrito de compras
+  const productsContext = useContext(Context);
 
-const productsContext = useContext(Context);
-
-useEffect(() => {
-  productsContext.showProducts();
-}, []);
+  useEffect(() => {
+    productsContext.showProducts();
+  }, []);
   return (
     <>
       {productsContext.products.length != 0 ? (
@@ -32,10 +28,12 @@ useEffect(() => {
               <div className="productContainer">
                 <h2 className="productTittle">{product.name}</h2>
                 <div className="productImageContainer">
-                  <a href={`/oneProduct/${product._id}`} 
-                  onClick={()=>{
-                    sendId(product._id)
-                  }}>
+                  <a
+                    href={`/oneProduct/${product._id}`}
+                    onClick={() => {
+                      sendId(product._id);
+                    }}
+                  >
                     <img
                       className="productImage"
                       src={product.image}
@@ -53,14 +51,20 @@ useEffect(() => {
                     )}
                   </button>
                 </div>
-                <div  className="ratingContainer">
+                <div className="ratingContainer">
                   {[...new Array(5)].map((star, index) => {
-          return index < product.rating ? (
-            <AiFillStar key={Math.random(1,100)} className="starFill" />
-          ) : (
-            <AiOutlineStar key={Math.random(1,100)} className="starOut" />
-          );
-        })}
+                    return index < product.rating ? (
+                      <AiFillStar
+                        key={Math.random(1, 100)}
+                        className="starFill"
+                      />
+                    ) : (
+                      <AiOutlineStar
+                        key={Math.random(1, 100)}
+                        className="starOut"
+                      />
+                    );
+                  })}
                 </div>
                 <div className="containerButton">
                   <button className="productButton">
@@ -76,8 +80,10 @@ useEffect(() => {
           ))}
         </>
       ) : (
-        <div style={{width: '100vw', border: '1px silid'}}>
-          <h2 style={{color: '#47c3de', textAlign:'center'}}>No hay Productos</h2>
+        <div style={{ width: "100vw", border: "1px silid" }}>
+          <h2 style={{ color: "#47c3de", textAlign: "center" }}>
+            No hay Productos
+          </h2>
         </div>
       )}
     </>

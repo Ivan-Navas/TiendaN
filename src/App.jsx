@@ -3,12 +3,10 @@ import Header from "./components/Header";
 import StoreInfo from "./components/StoreInfo";
 import OneProduct from "./components/OneProduct";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
 import Product from "./components/Product";
 import { ContextProvider } from './Context/Context'
 
 function App() {
-
   return (
     <ContextProvider>
       <Header />

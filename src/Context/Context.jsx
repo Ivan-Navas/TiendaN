@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export const Context = React.createContext({});
 
@@ -26,11 +26,17 @@ export const ContextProvider = ({ children }) => {
       method: "GET",
     });
     let datos = await peticion.json();
-
     if (datos.status === "success") {
       setOneProduct(datos.product);
     }
   };
+
+  const separador = (numero) => {
+    let parte = numero.toString().split(".");
+    parte[0] = parte[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return parte.join(".");
+  };
+
   return (
     <Context.Provider
       value={{
@@ -39,6 +45,7 @@ export const ContextProvider = ({ children }) => {
         oneProduct,
         setOneProduct,
         showOneProduct,
+        separador,
       }}
     >
       {children}

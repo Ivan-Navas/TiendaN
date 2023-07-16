@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { separador } from "../functions/functions";
 import { VscCircleFilled } from "react-icons/vsc";
 import { BsCartPlus } from "react-icons/bs";
 import {
@@ -19,8 +18,6 @@ function OneProduct() {
   useEffect(() => {
     oneProductContext.showOneProduct(params.id);
   }, []);
-
-  
 
   return (
     <>
